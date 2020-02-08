@@ -84,7 +84,7 @@ def gross_per_studio(collection)
     while movie_index < collection.count do 
       if list_of_studios.include?(collection[movie_index][:studio])
         studio_name = collection[movie_index][:studio]
-        puts studio_name
+        puts "this is the studio name #{studio_name}"
         total = gross[studio_name]
         puts "This is old Gross from #{studio_name}: #{total}"
         total += collection[movie_index][:worldwide_gross]
