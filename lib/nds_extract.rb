@@ -84,21 +84,13 @@ def gross_per_studio(collection)
     while movie_index < collection.count do 
       if list_of_studios.include?(collection[movie_index][:studio])
         studio_name = collection[movie_index][:studio]
-        puts "this is the studio name #{studio_name}"
         total = gross[studio_name]
-        puts "This is old Gross from #{studio_name}: #{total}"
         total += collection[movie_index][:worldwide_gross]
-        puts "This is new total #{total}"
         gross[studio_name] = total
-        puts "does contain studio #{collection[movie_index][:studio]}"
         movie_index += 1
-        puts "this is gross #{gross}"
-        puts "this is the list #{list_of_studios}"
-        puts "Movie Index: #{movie_index}"
       else 
         list_of_studios << collection[movie_index][:studio]
         gross[collection[movie_index][:studio]] = collection[movie_index][:worldwide_gross]
-        puts "doesn't contain studio: #{collection[movie_index][:studio]}"
         movie_index += 1 
       end
     end   
