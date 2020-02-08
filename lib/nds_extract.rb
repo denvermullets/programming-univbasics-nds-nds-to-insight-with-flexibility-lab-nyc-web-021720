@@ -99,7 +99,11 @@ def gross_per_studio(collection)
         
       end
     end   
-  
+  ryan = {
+    "Universal" => 71884,
+    "MSG" => 123456
+  }
+  puts ryan
   gross  
   
 end
