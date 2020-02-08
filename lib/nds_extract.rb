@@ -80,7 +80,7 @@ def gross_per_studio(collection)
   
   gross = {}
   movie_index = 0 
-  binding.pry
+  # binding.pry
     while movie_index < collection.count do 
       if list_of_studios.include?(collection[movie_index][:studio])
         studio_name = collection[movie_index][:studio]
