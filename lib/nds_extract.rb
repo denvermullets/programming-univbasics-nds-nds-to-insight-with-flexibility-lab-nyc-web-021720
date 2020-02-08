@@ -88,15 +88,10 @@ def gross_per_studio(collection)
         puts "This is old Gross from #{studio_name}: #{total}"
         total += collection[movie_index][:worldwide_gross]
         puts "This is new total #{total}"
-        gross[studio_name] = total
+        gross = { studio_name => total }
         puts "does contain studio"
         movie_index += 1
         puts "this is gross #{gross}"
-        ryan = {
-    "Universal" => 71884,
-    "MSG" => 123456
-  }
-  puts ryan
       else 
         list_of_studios << collection[movie_index][:studio]
         gross = { collection[movie_index][:studio] => collection[movie_index][:worldwide_gross] }
