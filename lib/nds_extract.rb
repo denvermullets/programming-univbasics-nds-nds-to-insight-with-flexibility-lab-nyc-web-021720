@@ -76,7 +76,8 @@ def gross_per_studio(collection)
   # Hash whose keys are the studio names and whose values are the sum
   # total of all the worldwide_gross numbers for every movie in the input Hash
   
-  # puts collection
+  # i'm sure there's a better way to do this but i'm basically cross referencing a custom
+  # array that adds the studio to the array if it isn't found
   list_of_studios = []
   gross = {}
   movie_index = 0 
