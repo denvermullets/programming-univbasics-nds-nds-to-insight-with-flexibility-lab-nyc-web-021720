@@ -89,6 +89,7 @@ def gross_per_studio(collection)
         gross[studio_name] = total
         puts "does contain studio"
         movie_index += 1
+        puts "this is gross #{gross}"
       else 
         # list_of_studios << { collection[movie_index][:studio] => collection[movie_index][:worldwide_gross] }
         list_of_studios << collection[movie_index][:studio]
