@@ -97,10 +97,9 @@ def gross_per_studio(collection)
         puts "Movie Index: #{movie_index}"
       else 
         list_of_studios << collection[movie_index][:studio]
-        # gross = { collection[movie_index][:studio] => collection[movie_index][:worldwide_gross] }
-        gross = { collection[movie_index][:studio] => 0 }
+        gross = { collection[movie_index][:studio] => collection[movie_index][:worldwide_gross] }
         puts "doesn't contain studio: #{collection[movie_index][:studio]}"
-        
+        movie_index += 1 
       end
     end   
   
