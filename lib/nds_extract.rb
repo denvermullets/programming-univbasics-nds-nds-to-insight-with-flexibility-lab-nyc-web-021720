@@ -77,7 +77,7 @@ def gross_per_studio(collection)
   # total of all the worldwide_gross numbers for every movie in the input Hash
   
   # puts collection
-  
+  list_of_studios = []
   gross = {}
   movie_index = 0 
   # binding.pry
@@ -90,7 +90,9 @@ def gross_per_studio(collection)
         puts "does contain studio"
         movie_index += 1
       else 
-        list_of_studios << { collection[movie_index][:studio] => collection[movie_index][:worldwide_gross] }
+        # list_of_studios << { collection[movie_index][:studio] => collection[movie_index][:worldwide_gross] }
+        list_of_studios << collection[movie_index][:studio]
+        gross = { collection[movie_index][:studio] => collection[movie_index][:worldwide_gross] }
         puts "doesn't contain studio"
         movie_index += 1
       end
